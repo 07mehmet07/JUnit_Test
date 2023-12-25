@@ -15,11 +15,9 @@ public class OrderStatusManagerTest {
 
     @Test
     public void testTransitionFromNewToPending() {
-        // Arrange
+
         OrderStatusManager.OrderState initialState = OrderStatusManager.OrderState.NEW;
-        // Act
         OrderStatusManager.OrderState nextState = manager.nextState(initialState);
-        // Assert
         assertEquals(OrderStatusManager.OrderState.PENDING, nextState, "State should transition from NEW to PENDING");
     }
 
